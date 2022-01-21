@@ -29,6 +29,30 @@ body{
     border: 6px solid black;
 }
 
+/* HOVER EFFECT START */
+.eye__container:hover  .eye{
+    transform: rotate(148deg);
+}
+.eye__container:hover  .eye::before{
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.eye__container:hover  .eye::after{
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.eye__container:hover  .eye__feature-1{
+    transform: translate(-150%,-210%) rotate(28deg) scale(1);
+}
+.eye__container:hover  .eye__feature-2{
+    transform: translate(300%,-230%) rotate(55deg) scale(1);
+}
+.eye__container:hover  .eye__feature-3{
+    transform: translate(25%,150%) rotate(130deg) scale(1);
+}
+
+/* HOVER EFFECTS END */
+
 .eye__link{
     position: absolute;
     top: 50%;
@@ -39,6 +63,7 @@ body{
     height: 298px;
     border-radius: 50%;
 }
+
 .eye{
     position: relative;
     border: 3px solid black;
@@ -48,20 +73,23 @@ body{
     border-radius: 50%;
     background-color: #000;
     transform: rotate(-25deg);
+    transition: all 1s linear .3s;
 }
 
 .eye::before{
     content: "";
     position: absolute;
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
 
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%)  scale(0.3);
 
     border-radius: 50%;
     background-color: #fff;
+    transition: all 1s linear  .25s;
+    
 
     z-index: 10;
 }
@@ -76,11 +104,11 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%) scale(0.4);
     border-radius:5% 70% 5% 70%;
 
     box-shadow: 15px 15px 48px rgba(0,0,0,.8),-15px -15px 48px rgba(0,0,0,.8);
-
+    transition: all 1s linear;
     z-index: 5;
 }
 
@@ -90,8 +118,9 @@ body{
     height: 45px;
     width: 45px;
 
-    transform: translate(-150%,-210%) rotate(28deg);
+    transform: translate(-150%,-210%) rotate(-55deg) scale(0);
     border-radius: 50%;
+    transition: all 1s linear;
 }
 .eye__feature-1::before{
     content: "";
@@ -116,9 +145,10 @@ body{
     height: 45px;
     width: 45px;
 
-    transform: translate(300%,-230%) rotate(55deg);
+    transform: translate(300%,-230%) rotate(-35deg) scale(0);
 
     border-radius: 50%;
+    transition: all 1s linear;
 }
 .eye__feature-2::before{
     content: "";
@@ -147,8 +177,9 @@ body{
     width: 45px;
 
     
-    transform: translate(25%,150%) rotate(135deg);
+    transform: translate(25%,150%) rotate(-35deg) scale(0);
     border-radius: 50%;
+    transition: all 1s linear;
     
     
 }
@@ -165,3 +196,5 @@ body{
     border-radius: 50%;
     clip-path: polygon(46% 36%, 100% 26%, 75% 47%, 77% 69%, 62% 86%, 38% 83%, 29% 60%);
 }
+
+
