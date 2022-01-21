@@ -1,0 +1,167 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.eye__container{
+
+    background-color: red;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-15deg);
+    position: relative;
+
+
+    border: 6px solid black;
+}
+
+.eye__link{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 3px solid #212121;
+    width: 298px;
+    height: 298px;
+    border-radius: 50%;
+}
+.eye{
+    position: relative;
+    border: 3px solid black;
+    
+    height: 85px;
+    width: 85px;
+    border-radius: 50%;
+    background-color: #000;
+    transform: rotate(-25deg);
+}
+
+.eye::before{
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 50px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    border-radius: 50%;
+    background-color: #fff;
+
+    z-index: 10;
+}
+
+.eye::after{
+    content: "";
+    height: 60px;
+    width: 60px;
+
+    background-color: #212121;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius:5% 70% 5% 70%;
+
+    box-shadow: 15px 15px 48px rgba(0,0,0,.8),-15px -15px 48px rgba(0,0,0,.8);
+
+    z-index: 5;
+}
+
+.eye__feature-1{
+    position: relative;
+    background-color: black;
+    height: 45px;
+    width: 45px;
+
+    transform: translate(-150%,-210%) rotate(28deg);
+    border-radius: 50%;
+}
+.eye__feature-1::before{
+    content: "";
+    background-color:#000;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 15%;
+    left:25%;
+    transform: translate(-50%,-50%);
+    clip-path: polygon(5% 15%, 45% 45%, 66% 42%, 86% 59%, 82% 86%, 54% 95%, 26% 76%);
+
+    border-radius: 50%;
+}
+
+
+
+
+.eye__feature-2{
+    position: relative;
+    background-color: black;
+    height: 45px;
+    width: 45px;
+
+    transform: translate(300%,-230%) rotate(55deg);
+
+    border-radius: 50%;
+}
+.eye__feature-2::before{
+    content: "";
+    background-color:#000;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotateZ(-10deg);
+    border-radius: 50%;
+    clip-path: polygon(44% 34%, 99% 26%, 75% 47%, 77% 69%, 62% 86%, 38% 83%, 28% 61%);
+}
+
+
+
+
+
+
+
+.eye__feature-3{
+    position: relative;
+    background-color: black;
+
+    height: 45px;
+    width: 45px;
+
+    
+    transform: translate(25%,150%) rotate(135deg);
+    border-radius: 50%;
+    
+    
+}
+
+.eye__feature-3::before{
+    content: "";
+    background-color:#000;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: -40%;
+    left: 0%;
+
+    border-radius: 50%;
+    clip-path: polygon(46% 36%, 100% 26%, 75% 47%, 77% 69%, 62% 86%, 38% 83%, 29% 60%);
+}
